@@ -12,16 +12,16 @@ app.use(express.json());
 app.use(cors());
 app.use(cookieParser()); 
 
-const __dirname = path.resolve();
-// Serve frontend static files
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
+// const __dirname = path.resolve();
+// // Serve frontend static files
+// app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 app.use(userRoutes);
 
 // Catch-all route to serve frontend's index.html
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+// });
 
 
 const PORT = 5000;
